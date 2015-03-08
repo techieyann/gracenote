@@ -10,8 +10,8 @@ var Twit = new TwitMaker({
 	access_token_secret: '...'
 });
 
-//only grab tweets from San Francisco
-var SF = ['-122.75', '36.8', '-121.75', '37.8'];
+//only grab tweets from San Francisco Area
+var SF = ['-122.75','36.8','-121.75','37.8'];
 var stream = Twit.stream('statuses/filter', {locations: SF});
 
 //wrap the asynchronous stream.on() for Meteor processing
@@ -23,7 +23,9 @@ streamSync('tweet', function(tweet) {
 		var options = {
 			text: tweet.text,
 			user: tweet.user.screen_name,
+			tweet_id: tweet.id_str,
 			coordinates: tweet.coordinates,
+			heading: 0,
 			readable_date: tweet.created_at,
 			created_at: tweet.timestamp_ms
 		};
