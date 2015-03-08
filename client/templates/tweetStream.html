@@ -1,0 +1,9 @@
+<template name="tweetStream">
+	<p>hello world!</p>
+	<button class="btn btn-default stream-running"><span class="glyphicon glyphicon-{{streamRunning}}"></span></button>
+	<ul>
+	{{#each tweets}}
+	<li>{{text}}</li>
+	{{/each}}
+	</ul>
+</template>
