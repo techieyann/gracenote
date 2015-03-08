@@ -5,16 +5,16 @@
   "scaffolding":          true,
   "type":                 false,
   "code":                 false,
-  "grid":                 false,
+  "grid":                 true,
   "tables":               false,
   "forms":                false,
   "buttons":              true,
 
   "glyphicons":           true,
-  "button-groups":        false,
+  "button-groups":        true,
   "input-groups":         false,
   "navs":                 false,
-  "navbar":               false,
+  "navbar":               true,
   "breadcrumbs":          false,
   "pagination":           false,
   "pager":                false,
@@ -31,8 +31,8 @@
   "wells":                false,
   "close":                false,
 
-  "component-animations": false,
-  "dropdowns":            false,
+  "component-animations": true,
+  "dropdowns":            true,
   "modals":               false,
   "tooltip":              false,
   "popovers":             false,
@@ -40,12 +40,12 @@
   
   "affix":                false,
   "alert":                false,
-  "button":               false,
+  "button":               true,
   "collapse":             false,
   "scrollspy":            false,
   "tab":                  false,
   "transition":           false,
 
-  "utilities":            false,
-  "responsive-utilities": false
+  "utilities":            true,
+  "responsive-utilities": true
 }}
