@@ -1,9 +1,14 @@
 <template name="tweetStream">
 	<p>hello world!</p>
 	<button class="btn btn-default stream-running"><span class="glyphicon glyphicon-{{streamRunning}}"></span></button>
-	<ul>
+	<ul class="unstyled">
 	{{#each tweets}}
-	<li>{{text}}</li>
+	<li>
+		<p><strong>@{{user}}</strong> - {{text}}</p>
+		<img src="https://maps.googleapis.com/maps/api/streetview?size=200x100&location={{lat}},{{lon}}&fov=120&heading=0&pitch=5">
+<img src="https://maps.googleapis.com/maps/api/streetview?size=200x100&location={{lat}},{{lon}}&fov=120&heading=120&pitch=5">
+<img src="https://maps.googleapis.com/maps/api/streetview?size=200x100&location={{lat}},{{lon}}&fov=120&heading=240&pitch=5">
+	</li>
 	{{/each}}
 	</ul>
 </template>

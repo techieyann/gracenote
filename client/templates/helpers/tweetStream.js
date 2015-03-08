@@ -4,6 +4,12 @@ Template.tweetStream.helpers({
 		if (settings) {
 			return (settings.running ? 'pause':'play');
 		}
+	},
+	lat: function () {
+		return this.coordinates.coordinates[1];
+	},
+	lon: function () {
+		return this.coordinates.coordinates[0];
 	}
 });
 
