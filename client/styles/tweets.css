@@ -1,0 +1,21 @@
+.new-tweet-number {
+  text-align: center;
+}
+.tweet-box {
+	border-bottom: solid 1px #cccccc;
+  margin-bottom: 20px;
+}
+.tweet {
+  background:#cccccc;
+  border: solid 1px #999999;
+	margin-bottom: 20px;
+
+}
+.street-view {
+  position: relative;
+  width:380px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+}
