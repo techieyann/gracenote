@@ -17,7 +17,7 @@ install meteor:
 curl https://install.meteor.com/ | sh 
 ```
 
-Modify server/tweets.js (lines 7-10) to include your Twitter API keys:
+Modify `gracenote/server/tweets.js` (lines 7-10) to include your Twitter API keys:
 
 ```
 consumer_key: '...',
@@ -26,7 +26,7 @@ access_token: '...',
 access_token_secret: '...'
 ```
 
-Optionally modify client/templates/tweetStream.html (line 16) by adding your Streetview enabled Google API key to the Streetview image url:
+Optionally modify `gracenote/client/templates/tweetStream.html` (line 16) by adding your Streetview enabled Google API key to the Streetview image url:
 ```
 src="https://maps.googleapis.com/maps/api/streetview?...&key=..."
 ```
