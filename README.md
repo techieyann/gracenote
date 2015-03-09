@@ -28,5 +28,7 @@ Modify server/tweets.js to include your Twitter API keys:
 
 Optionally modify client/templates/tweetStream.html by adding your Streetview enabled Google API key to the Streetview image url:
 ```
-src="https://maps.googleapis.com/maps/api/streetview?size=300x100&location={{lat}},{{lon}}&fov=120&heading={{heading}}&pitch=5&key=..."
+src="https://maps.googleapis.com/maps/api/streetview?...&key=..."
 ```
+
+And finally run meteor in the root directory of the repo. If everything went correctly, you can access your stream at http://localhost:3000
