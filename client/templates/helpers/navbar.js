@@ -41,6 +41,7 @@ Template.navbar.events = {
 		if (settings) {
 			settings.tweetCount = e.target.id;
 			Tweets.update({_id: 'settings'}, settings);
+			Meteor.call('limitTweets');
 		}
 	}
 };

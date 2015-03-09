@@ -1,5 +1,25 @@
 Tweets = new Mongo.Collection('tweets');
 
+Meteor.methods({
+ 'limitTweets': function () {
+	 //redis-ify Tweets collection
+	 var settings = Tweets.findOne('settings');
+	 if (settings) {
+		 var numTweets = Tweets.find().count() - 1;
+		 var maxTweets = settings.tweetCount;
+		 if (numTweets > maxTweets) {
+			 var oldest = Tweets.find({_id:{$ne: 'settings'}}, {sort: {created_at: -1}, fields: {_id: 1}}).fetch();
+			 oldest.splice(0, maxTweets);
+			 var ids = [];
+			 oldest.forEach(function (idKey) {
+				 ids.push(idKey._id);
+			 });
+			 Tweets.remove({_id: {$in: ids}});
+		 }
+	 }
+ }
+});
+
 if(Meteor.isServer) {
 	Meteor.startup(function () {
 		if (!Tweets.find('settings').count()) {
@@ -15,17 +35,6 @@ if(Meteor.isServer) {
 if(Meteor.isClient) {
 	Meteor.startup(function () {
 		Session.set('sort', 'timely');
-	});
-	Deps.autorun(function () {
-		var settings = Tweets.findOne('settings');
-		if (settings){
-			var tweetCount = settings.tweetCount;
-			//add one for settings entry
-			if((Tweets.find().count()-1) > tweetCount) {
-				var oldestId = Tweets.findOne({_id:{$ne: 'settings'}}, {sort: {created_at: 1}})._id;
-				Tweets.remove(oldestId);
-			}
-		}
 	});
 }
 

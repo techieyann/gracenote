@@ -30,6 +30,7 @@ streamSync('tweet', function(tweet) {
 			created_at: tweet.timestamp_ms
 		};
 		Tweets.insert(options);
+		Meteor.call('limitTweets');
 	}
 });
 
