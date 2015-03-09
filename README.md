@@ -1,8 +1,8 @@
 # Gracenote Coding Challenge
-This is a meteor app which streams tweets posted in the SF Bay Area. The stream is sortable by tweet text or time of creation. Pausing the stream causes Streetview images to be displayed inline. Users can rotate the heading of the image to find the best view. Users can also choose the number of tweets displayed.
+This is a meteor app which streams tweets posted in the SF Bay Area. The stream is sortable by tweet text or time of creation. Pausing the stream causes Streetview images to be displayed inline. Users can rotate the heading of the image to find the best view. Users can also choose the number of tweets retained.
 
 # Preview
-View the app in action at https://gracenote.ianmceachern.com
+View the app in action at http://gracenote.ianmceachern.com
 
 # Installation
 Clone this repo:
@@ -17,7 +17,7 @@ install meteor:
 curl https://install.meteor.com/ | sh 
 ```
 
-Modify server/tweets.js to include your Twitter API keys:
+Modify server/tweets.js (lines 7-10) to include your Twitter API keys:
 
 ```
 consumer_key: '...',
@@ -26,7 +26,7 @@ access_token: '...',
 access_token_secret: '...'
 ```
 
-Optionally modify client/templates/tweetStream.html by adding your Streetview enabled Google API key to the Streetview image url:
+Optionally modify client/templates/tweetStream.html (line 16) by adding your Streetview enabled Google API key to the Streetview image url:
 ```
 src="https://maps.googleapis.com/maps/api/streetview?...&key=..."
 ```
