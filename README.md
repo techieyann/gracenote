@@ -8,7 +8,7 @@ View the app in action at https://gracenote.ianmceachern.com
 Clone this repo:
 
 ```
-git clone git@github.com:techieyann/gracenote.git
+git clone https://github.com/techieyann/gracenote
 ```
 
 install meteor: 
