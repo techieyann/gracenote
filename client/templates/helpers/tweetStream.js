@@ -1,6 +1,6 @@
 Template.tweetStream.helpers({
 	streamRunning: function () {
-		var settings = Tweets.findOne('settings');
+		var settings = Tweets.findOne({type: 'settings'});
 		if (settings) return settings.running;
 	},
 	lat: function () {

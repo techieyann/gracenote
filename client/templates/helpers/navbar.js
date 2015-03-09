@@ -26,7 +26,7 @@ Template.navbar.events = {
 		var settings = Tweets.findOne('settings');
 		if (settings) {
 			settings.running = !settings.running;
-			Tweets.update({_id: 'settings'}, settings);
+			Tweets.update('settings', settings);
 		}
 	},
 	'click .stream-sort': function () {
@@ -39,8 +39,8 @@ Template.navbar.events = {
 		e.preventDefault();
 		var settings = Tweets.findOne('settings');
 		if (settings) {
-			settings.tweetCount = e.target.id;
-			Tweets.update({_id: 'settings'}, settings);
+			settings.tweetCount = parseInt(e.target.id, 10);
+			Tweets.update('settings', settings);
 			Meteor.call('limitTweets');
 		}
 	}

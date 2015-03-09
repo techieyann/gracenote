@@ -8,7 +8,7 @@ Meteor.methods({
 		 var numTweets = Tweets.find().count() - 1;
 		 var maxTweets = settings.tweetCount;
 		 if (numTweets > maxTweets) {
-			 var oldest = Tweets.find({_id:{$ne: 'settings'}}, {sort: {created_at: -1}, fields: {_id: 1}}).fetch();
+			 var oldest = Tweets.find({type: 'tweet'}, {sort: {created_at: -1}, fields: {_id: 1}}).fetch();
 			 oldest.splice(0, maxTweets);
 			 var ids = [];
 			 oldest.forEach(function (idKey) {
@@ -22,9 +22,10 @@ Meteor.methods({
 
 if(Meteor.isServer) {
 	Meteor.startup(function () {
-		if (!Tweets.find('settings').count()) {
+		if (!Tweets.find({type: 'settings'}).count()) {
 			var init = {
 				_id: 'settings',
+				type: 'settings',
 				running: true,
 				tweetCount: 10
 			};

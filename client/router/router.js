@@ -22,7 +22,7 @@ Router.map(function () {
 			var sort = Session.get('sort');
 			if (sort == 'timely') filter.sort = {created_at: -1};
 			if (sort == 'alphabetical') filter.sort = {text: 1};
-			var foundTweets = Tweets.find({_id: {$ne: 'settings'}}, filter);
+			var foundTweets = Tweets.find({type: 'tweet'}, filter);
 			return {
 				tweets: foundTweets
 			};
