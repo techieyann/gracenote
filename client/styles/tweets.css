@@ -1,8 +1,6 @@
 .navbar-right>li {
-  padding-right:20px;
-}
-.new-tweet-number {
-  text-align: center;
+  padding-right: 10px;
+	padding-left: 10px;
 }
 .tweets {
   padding-top: 75px;
@@ -14,17 +12,32 @@
 .tweet {
   background: #cccccc;
   border: solid 1px #999999;
+	border-radius: 5px;
 	margin-bottom: 20px;
 
 }
-.street-view {
+.location-link {
   position: relative;
-  width: 380px;
+	text-align: right;
+}
+.centered {
+  text-align: center;
+}
+.streetview {
+  position: relative;
+	width: 300px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: auto;
 	margin-right: auto;
 }
-footer {
-  text-align: center;
+#heading-left {
+  position: absolute;
+	top: 35px;
+	left: -25px;
+}
+#heading-right {
+  position: absolute;
+	top: 35px;
+	right: -25px;
 }

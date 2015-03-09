@@ -26,25 +26,20 @@
 							<button class="btn navbar-btn btn-default stream-sort {{sortDisabled 'alphabetical'}}"><span class="glyphicon glyphicon-sort-by-alphabet"></span></button>
 						</div>
 					</li>
-					<li>
-						
-						<label>Display</label>
-						<div class="btn-group">
-							<button type="button" class="btn navbar-btn btn-default dropdown-toggle" data-toggle="dropdown">
-								{{numTweets}} <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a class="new-tweet-number" id="1" href="#">One</a></li>
-								<li class="divider"></li>
-								<li><a class="new-tweet-number" id="5" href="#">Five</a></li>
-								<li class="divider"></li>
-								<li><a class="new-tweet-number" id="10" href="#">Ten</a></li>
-								<li class="divider"></li>
-								<li><a class="new-tweet-number" id="15" href="#">Fifteen</a></li>
-							</ul>
-						</div>
+					<li class="dropdown">
+						<button class="btn navbar-btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							Display {{numTweets}} <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu centered" role="menu">
+							<li><a class="new-tweet-number" id="1" href="#">One</a></li>
+							<li class="divider"></li>
+							<li><a class="new-tweet-number" id="5" href="#">Five</a></li>
+							<li class="divider"></li>
+							<li><a class="new-tweet-number" id="10" href="#">Ten</a></li>
+							<li class="divider"></li>
+							<li><a class="new-tweet-number" id="15" href="#">Fifteen</a></li>
+						</ul>
 					</li>
-
 				</ul>
 			</div>
 		</div>

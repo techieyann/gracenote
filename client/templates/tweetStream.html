@@ -6,20 +6,16 @@
 			<div class="tweet col-sm-4 col-md-5 col-md-offset-1">
 				<p><strong>@<a href="https://twitter.com/{{user}}" target="_blank">{{user}}</a></strong> <a href="https://twitter.com/{{user}}/status/{{tweet_id}}" target="_blank">tweeted</a>:</p>
 				<p class="tweet-text">{{text}}</p>
-				<p class="pull-right"> from <a href="https://maps.google.com/maps?q={{lat}},{{lon}}&z=16" target="_blank" title="({{lat}}, {{lon}})">here</a>. </p>
-				{{#unless streamRunning}}
-				<p>posted at {{readable_date}}</p>
-				{{/unless}}
+				<p class="location-link"> from <a href="https://maps.google.com/maps?q={{lat}},{{lon}}&z=16" target="_blank" title="({{lat}}, {{lon}})">here</a>. </p>
 			</div>
 			<div class="col-sm-8 col-md-6">
+				<div class="centered">posted at {{readable_date}}</div>
 				{{#unless streamRunning}}
-				<div class="street-view">
+				<div class="streetview">
 					<button  id="heading-left" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button>
-					<img src="https://maps.googleapis.com/maps/api/streetview?size=300x100&location={{lat}},{{lon}}&fov=120&heading={{heading}}&pitch=5">
+					<img class="streetview-img" src="https://maps.googleapis.com/maps/api/streetview?size=300x100&location={{lat}},{{lon}}&fov=120&heading={{heading}}&pitch=5" alt="Streetview for ({{lat}},{{lon}})">
 					<button id="heading-right" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-chevron-right"></span></button>
 				</div>
-				{{else}}
-				<p>posted at {{readable_date}}</p>
 				{{/unless}}
 			</div>			
 		</div>
