@@ -4,5 +4,11 @@
 </head>
 
 <template name="index">
-{{> yield}}
+<div class="container">
+	{{> navbar}}
+	{{> yield}}
+	<footer>
+		<p>&copy; 2015</p>
+	</footer>
+</div>
 </template>
