@@ -1,10 +1,19 @@
+.centered {
+  text-align: center;
+}
+
+/*navbar*/
 .navbar-right>li {
+  text-align: right;
   padding-right: 10px;
 	padding-left: 10px;
 }
-.tweets {
+.spacer {
   padding-top: 75px;
 }
+
+/*tweet content*/
+
 .tweet-box {
 	border-bottom: solid 1px #cccccc;
   margin-bottom: 20px;
@@ -20,9 +29,8 @@
   position: relative;
 	text-align: right;
 }
-.centered {
-  text-align: center;
-}
+
+/*location content*/
 .streetview {
   position: relative;
 	width: 300px;
