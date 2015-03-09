@@ -31,4 +31,9 @@ Optionally modify client/templates/tweetStream.html by adding your Streetview en
 src="https://maps.googleapis.com/maps/api/streetview?...&key=..."
 ```
 
-And finally run meteor in the root directory of the repo. If everything went correctly, you can access your stream at http://localhost:3000
+And finally run meteor in the root directory of the repo.
+```
+cd gracenote
+meteor
+```
+If everything went correctly, you can access your stream at http://localhost:3000
