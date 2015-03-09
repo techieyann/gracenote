@@ -20,10 +20,10 @@ curl https://install.meteor.com/ | sh
 Modify server/tweets.js to include your Twitter API keys:
 
 ```
-	consumer_key: '...',
-	consumer_secret: '...',
-	access_token: '...',
-	access_token_secret: '...'
+consumer_key: '...',
+consumer_secret: '...',
+access_token: '...',
+access_token_secret: '...'
 ```
 
 Optionally modify client/templates/tweetStream.html by adding your Streetview enabled Google API key to the Streetview image url:
